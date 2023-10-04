@@ -15,7 +15,13 @@ from skimage.measure import regionprops
 from skimage.morphology import remove_small_objects
 from skimage.measure import regionprops
 from skimage.morphology import remove_small_objects
-from skimage.segmentation import watershed
+
+
+# PZhang: skimage 0.18.0 has moved watershed from morphology to segmentation
+try:
+    from skimage.morphology import watershed
+except:
+    from skimage.segmentation import watershed
 
 from scipy.ndimage import measurements
 from scipy.ndimage.morphology import binary_fill_holes

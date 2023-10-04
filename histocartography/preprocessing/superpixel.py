@@ -11,7 +11,13 @@ import cv2
 import h5py
 import numpy as np
 from skimage.color.colorconv import rgb2hed
-from skimage.future import graph
+
+# PZhang: skimage.future.graph is deprecated, use skimage.graph instead
+try:
+    from skimage.future import graph
+except:
+    from skimage import graph
+
 from skimage.segmentation import slic
 
 from ..pipeline import PipelineStep
