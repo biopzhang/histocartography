@@ -77,7 +77,8 @@ def download_box_link(url, out_fname='box.file'):
         print('File already downloaded.')
         return out_fname
 
-    r = requests.get(url, stream=True)
+    # PZhang: disable SSL verification
+    r = requests.get(url, stream=True, verify=False)
 
     with open(out_fname, "wb") as large_file:
         for chunk in r.iter_content(chunk_size=1024):
