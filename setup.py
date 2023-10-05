@@ -22,7 +22,7 @@ PYPI_REQUIREMENTS = [
     "pillow>=7.2.0",
     "opencv-python>=3.4.8.29",
     "scikit-image>=0.17.2",
-    "dgl==0.4.3.post2",
+    "dgl>=0.4.3.post2",
     "PyYAML>=5.1.2",
 ]
 regex = re.compile(r"(git|svn|hg|bzr)\+")
