@@ -23,7 +23,7 @@ try:
     from skimage.feature import greycomatrix, greycoprops
 except ImportError:
     from skimage.feature import graycomatrix as greycomatrix
-    from skimage.feature import greycoprops as greycoprops
+    from skimage.feature import graycoprops as greycoprops
 
 from skimage.filters.rank import entropy as Entropy
 from skimage.measure import regionprops
